@@ -19,7 +19,7 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <div className=" ">
+    <div className="">
       {SliderData.map((slide, index) => {
         return (
           <div className=""
