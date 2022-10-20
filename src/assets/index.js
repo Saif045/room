@@ -12,5 +12,10 @@ import alight from '../assets/about-light.jpg'
 import right from '../assets/icon-angle-right.svg'
 import left from '../assets/icon-angle-left.svg'
 
+import facebook from './icon-facebook.svg'
+import instagram from './icon-instagram.svg'
+import twitter from './icon-twitter.svg'
+import pinterest from './icon-pinterest.svg'
 
-export {dhero1 ,dhero2 ,dhero3 ,mhero1 ,mhero2 ,mhero3 , adark , alight , left ,right}
+
+export {dhero1 ,dhero2 ,dhero3 ,mhero1 ,mhero2 ,mhero3 , adark , alight , left ,right ,facebook ,instagram ,twitter , pinterest}

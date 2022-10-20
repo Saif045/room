@@ -19,7 +19,7 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    <section className="h-screen w-full">
+    <section className="h-full w-full">
       {SliderData.map((slide, index) => {
         return (
           <div className="" key={index}>

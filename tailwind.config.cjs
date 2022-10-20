@@ -10,9 +10,9 @@ module.exports = {
       screens: {
         'mll': '850px',
       },
-      height: {
-        'big': '70vh',
-        'small': '30vh'
+      width: {
+        'big': '50vh',
+        
       },
       
     },
