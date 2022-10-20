@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   content: [
@@ -8,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'mll': '850px',
+        'xs': '250px',
+        ...defaultTheme.screens,
       },
       width: {
         'big': '50vh',
