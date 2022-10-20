@@ -1,35 +1,38 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import About from './Components/pages/About'
-import Contact from './Components/pages/Contact'
-import Home from './Components/pages/Home'
-import Shop from './Components/pages/Shop'
+import About from "./Components/pages/About";
+import Contact from "./Components/pages/Contact";
+import Home from "./Components/pages/Home";
+import Shop from "./Components/pages/Shop";
 
-import Header from './Components/Header'
+import Header from "./Components/Header";
 
-import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  return( 
-  
-      <Router>
+  return (
+    <Router>
+      <Header />
 
-        <Header />
-        
-           <Routes>
-
-             <Route path="/" element={<Home />}> </Route>
-
-             <Route path="/about" element={<About />}> </Route>
-
-             <Route path="/Shop" element={<Shop />}> </Route>
-
-             <Route path="/contact" element={<Contact />}> </Route>
-
-           </Routes>
+      <Routes>
+        <Route path="/" element={<Home />}>
           
-       </Router>
-  )
+        </Route>
+
+        <Route path="/about" element={<About />}>
+       
+        </Route>
+
+        <Route path="/Shop" element={<Shop />}>
+   
+        </Route>
+
+        <Route path="/contact" element={<Contact />}>
+  
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

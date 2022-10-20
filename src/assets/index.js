@@ -9,4 +9,8 @@ import mhero3 from '../assets/d-hero-3.jpg'
 import adark from '../assets/about-dark.jpg'
 import alight from '../assets/about-light.jpg'
 
-export {dhero1 ,dhero2 ,dhero3 ,mhero1 ,mhero2 ,mhero3 , adark , alight}
+import right from '../assets/icon-angle-right.svg'
+import left from '../assets/icon-angle-left.svg'
+
+
+export {dhero1 ,dhero2 ,dhero3 ,mhero1 ,mhero2 ,mhero3 , adark , alight , left ,right}
