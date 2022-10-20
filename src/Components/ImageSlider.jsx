@@ -24,9 +24,9 @@ const ImageSlider = ({ slides }) => {
         return (
           <div className="" key={index}>
             {index === current && (
-              <div className=" grid md:grid-cols-5 ">
+              <div className="grid md:grid-cols-5 ">
                 <div className="relative sm:col-span-3 ">
-                  <img className="w-full object-cover" src={slide.image} />
+                  <img className="h-full w-full object-cover" src={slide.image} />
 
                   <div className="absolute bottom-0 right-0 md:hidden">
                     <button className="bg-black p-2 " onClick={prevSlide}>

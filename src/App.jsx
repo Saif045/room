@@ -8,6 +8,7 @@ import Shop from "./Components/pages/Shop";
 import Header from "./Components/Header";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
   
         </Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }
