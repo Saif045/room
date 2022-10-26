@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { SliderData } from "./SliderData";
 import { adark, alight, right, left } from "../assets/index";
-
+import { Link } from "react-router-dom";
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+
+
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -17,6 +19,8 @@ const ImageSlider = ({ slides }) => {
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
+
+
 
   return (
     <section className="h-full w-full">
@@ -47,9 +51,11 @@ const ImageSlider = ({ slides }) => {
                       <p className="leading-snug lg:leading-normal text-sm lg:text-base xl:text-lg ">
                         {slide.text}
                       </p>
-                      <button className="text-left  md:text-center font-semibold">
+                      <Link to="/shop" className="md:text-center lg:text-left" >
+                      <button  className="text-left  md:text-center font-semibold border-black border-4 border-double  p-2 hover:bg-gray-50">
                         SHOP NOW
                       </button>
+                      </Link>
                     </div>
                   </div>
 

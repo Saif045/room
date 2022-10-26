@@ -12,6 +12,9 @@ module.exports = {
         'xs': '250px',
         ...defaultTheme.screens,
       },
+      container: {
+        center: true,
+      },
       width: {
         'big': '50vh',
         
