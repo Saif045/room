@@ -6,7 +6,7 @@ const Contact = () => {
            
          
         <div>
-           <div className='bg-slate-600 h-16 sm:h-20 w-full'> </div>
+           <div className='bg-black h-16 sm:h-20 w-full'> </div>
           <section className=" text-gray-700 body-font relative">
             
             <div className="container px-5 py-24 mx-auto">
@@ -63,7 +63,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="p-2 w-full">
-                    <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                    <button className="flex mx-auto text-white bg-black border-0 py-2 px-8 focus:outline-none hover:bg-gray-500 rounded text-lg">
                       Button
                     </button>
                   </div>

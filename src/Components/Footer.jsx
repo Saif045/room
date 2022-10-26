@@ -1,28 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import {facebook ,instagram ,twitter , pinterest } from '../assets/index'
+import { NavLink, Link } from "react-router-dom";
+import { facebook, instagram, twitter, pinterest } from "../assets/index";
 
 const Footer = () => {
   return (
     <div className="bg-black text-white text-center h-40 flex flex-col justify-center ">
-      <div className=" m-4 font-extrabold text-2xl">room</div>
+      <Link to="/">
+        <div className=" text-white m-4 font-extrabold text-2xl z-40">room</div>
+      </Link>
 
       <div className=" m-4 flex flex-col xs:flex-row justify-center">
-      <div>
-        <NavLink className=" px-2 " to="/">
-          home
-        </NavLink>
-        <NavLink className="px-2" to="/Shop">
-          Shop
-        </NavLink>
+        <div>
+          <NavLink className=" px-2 " to="/">
+            home
+          </NavLink>
+          <NavLink className="px-2" to="/Shop">
+            Shop
+          </NavLink>
         </div>
         <div>
-        <NavLink className="px-2 " to="/about">
-          about
-        </NavLink>
-        <NavLink className="px-2" to="/contact">
-          contact
-        </NavLink>
+          <NavLink className="px-2 " to="/about">
+            about
+          </NavLink>
+          <NavLink className="px-2" to="/contact">
+            contact
+          </NavLink>
         </div>
       </div>
       <div className="flex justify-center ">
