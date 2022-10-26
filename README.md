@@ -1,6 +1,6 @@
 # room
 
-a project dedicated to Home Decor and Furniture.
+a project dedicated to Home Décor and Furniture.
 
 built with React , Tailwind , vite and deployed on netlify
 
