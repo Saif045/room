@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { options } from "../../api/apiconfig";
-import axios from "axios";
-
+import { data } from "../../assets/ShopData/Data";
 const Shop = () => {
-  const [furniture, setfurniture] = useState([]);
+  const randomImage =
+  data.images[Math.floor(Math.random() * data.length)];
 
-  useEffect(() => {
-    const categoryReq = axios
-      .request(options)
-      .then(function (response) {
-        setfurniture(response.data.payload.categories[16]);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-    categoryReq;
-  }, []);
+  return (
+    <div>
+      <div>
+        {data.map((element, index) => {
+         
 
-
-  console.log(furniture);
-
-  return <div>Shop</div>;
+          return (
+            <div className="grid grid-cols-3" key={index}>
+              <p>{element.title}</p>
+              {console.log(randomImage)}
+              <img className="w-full h-[400px]" src={randomImage} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Shop;
