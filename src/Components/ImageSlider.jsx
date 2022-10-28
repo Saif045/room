@@ -6,8 +6,6 @@ const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-
-
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
@@ -20,8 +18,6 @@ const ImageSlider = ({ slides }) => {
     return null;
   }
 
-
-
   return (
     <section className="h-full w-full">
       {SliderData.map((slide, index) => {
@@ -30,9 +26,12 @@ const ImageSlider = ({ slides }) => {
             {index === current && (
               <div className="grid md:grid-cols-5 ">
                 <div className="relative sm:col-span-3 ">
-                  <img className="h-full w-full object-cover" src={slide.image} />
+                  <img
+                    className="h-full w-full object-cover"
+                    src={slide.image}
+                  />
 
-                  <div className="absolute bottom-0 right-0 md:hidden">
+                  <div className="absolute bottom-0 right-0 ">
                     <button className="bg-black p-2 " onClick={prevSlide}>
                       <img className="p-2" src={left} alt="Left" />
                     </button>
@@ -51,25 +50,12 @@ const ImageSlider = ({ slides }) => {
                       <p className="leading-snug lg:leading-normal text-sm lg:text-base xl:text-lg ">
                         {slide.text}
                       </p>
-                      <Link to="/shop" className="md:text-center lg:text-left" >
-                      <button  className="text-left  md:text-center font-semibold border-black border-4 border-double  p-2 hover:bg-gray-50">
-                        SHOP NOW
-                      </button>
+                      <Link to="/shop">
+                        <button className="text-left font-semibold border-4 border-double p-2 border-black hover:border-white hover:bg-black hover:text-white">
+                          SHOP NOW
+                        </button>
                       </Link>
                     </div>
-                  </div>
-
-                  <div className="hidden md:flex  absolute md:bottom-0">
-                    <button
-                      className="bg-black text-white p-2 "
-                      onClick={prevSlide}>
-                      <img className="bg-black  p-2 " src={left} alt="Left" />
-                    </button>
-                    <button
-                      className="bg-black text-white p-2 "
-                      onClick={nextSlide}>
-                      <img className="bg-black  p-2 " src={right} alt="right" />
-                    </button>
                   </div>
                 </div>
               </div>
@@ -79,7 +65,10 @@ const ImageSlider = ({ slides }) => {
       })}
 
       <div className=" grid md:grid-cols-7">
-        <img className=" h-full w-full object-cover md:col-span-2" src={adark} />
+        <img
+          className=" h-full w-full object-cover md:col-span-2"
+          src={adark}
+        />
         <div className="md:col-span-3 m-8 md:m-2 md:mx-4 lg:m-6 xl:m-14">
           <h1 className="font-bold mb-4 md:mb-1 lg:mb-2 xl:mb-3 lg:text-xl">
             ABOUT OUR FURNITURE
@@ -89,7 +78,7 @@ const ImageSlider = ({ slides }) => {
             your individual taste. Make each room unique, or pick a cohesive
             theme that best express your intersts and what inspires you. Find
             the furniture pieces you need, from traditional to contemporary
-            styles or anything in between. 
+            styles or anything in between.
           </p>
         </div>
         <img
@@ -102,3 +91,18 @@ const ImageSlider = ({ slides }) => {
 };
 
 export default ImageSlider;
+
+{
+  /*            <div className="hidden  absolute md:bottom-0">
+                    <button
+                      className="bg-black text-white p-2 "
+                      onClick={prevSlide}>
+                      <img className="bg-black  p-2 " src={left} alt="Left" />
+                    </button>
+                    <button
+                      className="bg-black text-white p-2 "
+                      onClick={nextSlide}>
+                      <img className="bg-black  p-2 " src={right} alt="right" />
+                    </button>
+                  </div> */
+}

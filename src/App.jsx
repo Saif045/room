@@ -1,13 +1,10 @@
-import React, { Component } from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./Components/pages/About";
 import Contact from "./Components/pages/Contact";
 import Home from "./Components/pages/Home";
 import Shop from "./Components/pages/Shop";
-
 import Header from "./Components/Header";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 
