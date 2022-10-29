@@ -21,34 +21,35 @@ const Header = () => {
           </div>{" "}
         </Link>
 
-          <div
-            className={
-              togglerNav
-                ? "absolute flex flex-row gap-4 sm:flex  bg-white  w-full h-24 justify-end pr-10 font-bold pt-8 text-center z-50"
-                : "hidden sm:flex"
-            }>
-            <NavLink className=" px-2 " onClick={clickHandler} to="/">
-              home
-            </NavLink>
-            <NavLink className="px-2" onClick={clickHandler} to="/Shop">
-              Shop
-            </NavLink>
-            <NavLink className="px-2 " onClick={clickHandler} to="/about">
-              about
-            </NavLink>
-            <NavLink className="px-2" onClick={clickHandler} to="/contact">
-              contact
-            </NavLink>
-          </div>
-          <button
-            className=" flex sm:hidden "
-            onClick={clickHandler}>
-            {togglerNav ? (
-              <AiOutlineClose className=" absolute top-8 left-6 z-50  text-gray-300" size={25} />
-            ) : (
-              <FaBars className="mr-4 mt-5 text-white" size={30} />
-            )}
-          </button>
+        <div
+          className={
+            togglerNav
+              ? "absolute flex flex-row gap-4 sm:flex  bg-white  w-full h-24 justify-end pr-10 font-bold pt-8 text-center z-50"
+              : "hidden sm:flex"
+          }>
+          <NavLink className=" px-2 " onClick={clickHandler} to="/">
+            home
+          </NavLink>
+          <NavLink className="px-2" onClick={clickHandler} to="/Shop">
+            Shop
+          </NavLink>
+          <NavLink className="px-2 " onClick={clickHandler} to="/about">
+            about
+          </NavLink>
+          <NavLink className="px-2" onClick={clickHandler} to="/contact">
+            contact
+          </NavLink>
+        </div>
+        <button className=" flex sm:hidden " onClick={clickHandler}>
+          {togglerNav ? (
+            <AiOutlineClose
+              className=" absolute top-8 left-6 z-50  text-gray-300"
+              size={25}
+            />
+          ) : (
+            <FaBars className="mr-4 mt-5 text-white" size={30} />
+          )}
+        </button>
       </div>
 
       <div className="hidden sm:flex absolute top-0 w-full   ">
