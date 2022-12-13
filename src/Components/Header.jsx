@@ -41,6 +41,7 @@ const Header = () => {
     { to: "/contact", name: "Contact" },
   ];
 
+  const logoTransition = { duration: 5.6, ease: "anticipate" };
   return (
     <div className="relative  z-40">
       <div className=" sm:hidden absolute top-0 w-full flex justify-between ">
