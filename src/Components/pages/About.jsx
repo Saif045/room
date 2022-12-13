@@ -1,9 +1,25 @@
 import React from "react";
 import { wc3 } from "../../assets/ShopData/Nordic wooden chair/index";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        type: "easeInOut",
+        duration: 0.7,
+      },
+    },
+  };
   return (
-    <div className="">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit={{ opacity: 0 }}
+      className="">
       <div className="h-20 bg-black block"></div>
       <div className="grid sm:grid-cols-2 sm:h-[500px] 2xl:h-[700px]   ">
         <div className=" my-14 sm:my-auto sm:container mx-auto w-4/6 lg:w-3/6 self-center justify-center text-center ">
@@ -24,7 +40,7 @@ const About = () => {
           src={wc3}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,25 @@
 import React from "react";
 import { data } from "../../assets/ShopData/Data";
+import { motion } from "framer-motion";
+
 const Shop = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        type: "easeInOut",
+        duration: 0.7,
+      },
+    },
+  };
+
   return (
-    <div>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit={{ opacity: 0 }}>
       <div className="h-20 bg-black block"></div>
       <div className=" m-2 sm:m-10 lg:mx-24 xl:mx-32 2xl:mx-44  text-center font-bold text-3xl">
         {" "}
@@ -30,7 +47,7 @@ const Shop = () => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
