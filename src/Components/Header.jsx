@@ -4,6 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import AnimateText from "./AnimateText";
 
 const Header = () => {
   const [open, cycleOpen] = useCycle(false, true);
@@ -41,8 +42,8 @@ const Header = () => {
     { to: "/contact", name: "Contact" },
   ];
 
-  const logoTransition = { duration: 5.6, ease: "anticipate" };
-  return (
+  let p ="room".split("") 
+   return (
     <div className="relative  z-40">
       <div className=" sm:hidden absolute top-0 w-full flex justify-between ">
         <Link to="/">
@@ -111,8 +112,9 @@ const Header = () => {
       <div className="hidden sm:flex absolute top-0 w-full   ">
         <Link to="/">
           {" "}
-          <div className=" text-white m-5 mr-10 font-extrabold text-3xl">
-            room
+          <div className=" text-white m-5 mr-10 font-bold text-3xl">
+            
+           <AnimateText p={p}/> 
           </div>{" "}
         </Link>
 

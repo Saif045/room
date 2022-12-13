@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { SliderData } from "./SliderData";
 import { right, left } from "../assets/index";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -18,6 +20,8 @@ const ImageSlider = ({ slides }) => {
     return null;
   }
 
+  const transition = { duration: 1.6, ease: "anticipate" };
+
   return (
     <section className="h-full w-full">
       {SliderData.map((slide, index) => {
@@ -32,11 +36,37 @@ const ImageSlider = ({ slides }) => {
                   />
 
                   <div className="absolute bottom-0 right-0 ">
-                    <button className="bg-black p-2 " onClick={prevSlide}>
-                      <img className="p-2" src={left} alt="Left" />
+                    <button className="bg-black p-4  " onClick={prevSlide}>
+                      <svg
+                        width="14"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <motion.path
+                          initial={{ opacity:0 , x: 10, pathLength: 0 }}
+                          animate={{ opacity:1 , x: 0, pathLength: 1 }}
+                          transition={transition}
+                          d="M13 0L1 12l12 12"
+                          stroke="#FFF"
+                          fill="none"
+                          fillRule="evenodd"
+                        />
+                      </svg>
                     </button>
-                    <button className="bg-black p-2 " onClick={nextSlide}>
-                      <img className="p-2 " src={right} alt="right" />
+                    <button className="bg-black p-4   " onClick={nextSlide}>
+                      <svg
+                        width="14"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <motion.path
+                          initial={{ opacity: 0, x: -10, pathLength: 0 }}
+                          animate={{ opacity: 1, x: 0, pathLength: 1 }}
+                          transition={transition}
+                          d="M1 0l12 12L1 24"
+                          stroke="#FFF"
+                          fill="none"
+                          fillRule="evenodd"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </div>
