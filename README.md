@@ -13,12 +13,6 @@ Start the development server: npm run dev
 Open http://127.0.0.1:5173/ to view the app in the browser.
 
 
-Features
-
-Choose from a variety of furniture, decorations, and color schemes
-
-Save and load different room designs
-
 Technologies Used
 
 React for building the user interface
